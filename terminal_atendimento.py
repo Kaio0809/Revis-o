@@ -9,7 +9,8 @@ def terminal():
         print("[1]−Creditar")
         print("[2]−Debitar")
         print("[3]−Transferir")
-        print("[4]−Saldo")
+        print("[4]−Consultar_Saldo")
+        
         print("[5]−Sair")
 
         opcao = int(input("Digite: "))

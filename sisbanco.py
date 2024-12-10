@@ -35,6 +35,20 @@ class ContaEspecial(Conta):
         self.__bonus += valor*0.01
         super().creditar(valor)
 
+class ContaImposto(Conta):
+    def __init__(self, numero):
+        super().__init__(numero)
+        self.__taxa = 0.001
+
+    def debitar(self, valor):
+        self.__saldo -= (valor + valor*self.__taxa) 
+
+    def get_taxa(self):
+        return self.__taxa
+
+    def set_taxa(self,taxa):
+        self.__taxa = taxa
+
 
 class Banco:
     def __init__(self):
